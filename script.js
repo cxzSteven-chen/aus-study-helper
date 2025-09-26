@@ -1,8 +1,8 @@
 // 展开/收起模块
 function toggleSection(id) {
     const content = document.getElementById(id);
-    const card = event.currentTarget; // 用currentTarget防冒泡
-    const arrow = card.querySelector('.arrow');
+    const h2 = event.currentTarget; // 直接用h2
+    const arrow = h2.querySelector('.arrow');
     content.classList.toggle('hidden');
     if (arrow) arrow.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
 }
@@ -10,29 +10,25 @@ function toggleSection(id) {
 // 搜索（后期连AI）
 function handleSearch() {
     const query = document.getElementById('searchInput').value;
-    alert('搜索: ' + query + ' - 匹配场景，Grok回应中...');
+    alert('搜索: ' + query + ' - 匹配场景，Grok回应中...'); // 占位
+    // 未来：fetch Grok API
 }
 
-// AI聊天
+// AI聊天（占位，未来真API）
 function toggleAI() {
     document.getElementById('ai-chat').classList.toggle('hidden');
 }
 
 function sendToAI() {
     const input = document.getElementById('chatInput').value;
-    if (!input) return;
     const output = document.getElementById('chat-output');
-    output.innerHTML += `<p><strong>你:</strong> ${input}</p><p><em>思考中...</em></p>`;
+    output.innerHTML += `<p><strong>你:</strong> ${input}</p>`;
+    output.innerHTML += `<p><strong>AI (Grok):</strong> 基于你的问题：${input}。例如，办卡英语差？用Google Translate + 带朋友。个性化建议：告诉我国家！</p>`;
     output.scrollTop = output.scrollHeight;
-    // 占位，未来Grok API
-    setTimeout(() => {
-        output.innerHTML = output.innerHTML.replace('<em>思考中...</em>', `<p><strong>AI (Grok):</strong> 澳洲建议：${input}？1. CommBank用APP翻译；2. 带CoE；3. 英语差找中文支行。更多问我！</p>`);
-        output.scrollTop = output.scrollHeight;
-    }, 1000);
     document.getElementById('chatInput').value = '';
 }
 
-// 回车发送
+// 回车发送AI
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('chatInput').addEventListener('keypress', function(e) {
         if (e.key === 'Enter') sendToAI();

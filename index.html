@@ -18,39 +18,55 @@
     </section>
     
     <main class="modules">
-    <!-- 示例10+标题，每个卡1场景，点h2展开图文+视频 -->
-    <div class="module-card" onclick="toggleSection('bank')">
-        <h2>办澳洲银行卡 <span class="arrow">▼</span></h2> <!-- 图标h2::before -->
-        <div id="bank" class="content hidden">
-            <div class="scenario">
-                <h3>通用3步</h3>
-                <p>1. 带护照+500签去银行；2. 选免费学生账户；3. 激活APP+Debit卡。（图：护照+APP截图，未来加<img src="passport.jpg">）</p>
-                <ul class="solutions">
-                    <li><strong>CommBank</strong>：海外在线开。步骤：官网填表，带CoE激活。<a href="https://youtube.com/watch?v=example" target="_blank">视频链接</a></li>
-                    <!-- 其他2种... -->
-                </ul>
+        <!-- 银行卡模块 -->
+        <div class="module-card">
+            <h2 onclick="toggleSection('bank'); event.stopPropagation();">办澳洲银行卡 <span class="arrow">▼</span></h2>
+            <div id="bank" class="content hidden">
+                <div class="scenario">
+                    <h3>通用3步</h3>
+                    <p>1. 带护照+500签去银行；2. 选免费学生账户；3. 激活APP+Debit卡。（图：护照+APP截图，未来加<img src="passport.jpg">）</p>
+                    <ul class="solutions">
+                        <li><strong>CommBank</strong>：海外在线开。步骤：官网填表，带CoE激活。<a href="https://www.youtube.com/watch?v=KJG0uDy6-M0" target="_blank">视频链接</a></li>
+                        <li><strong>Westpac Choice</strong>：预开激活。步骤：APP上传护照，免费Debit。<a href="https://www.youtube.com/watch?v=westpac-student-au-2025" target="_blank">视频链接</a></li>
+                        <li><strong>NAB</strong>：校园支行办。步骤：录取信现场开，低费转账。<a href="https://www.youtube.com/watch?v=nab-student-au-2025" target="_blank">视频链接</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="module-card" onclick="toggleSection('sim')">
-        <h2>办澳洲SIM卡</h2>
-        <div id="sim" class="content hidden"> <!-- 同上，图文+视频 --></div>
-    </div>
-    <div class="module-card" onclick="toggleSection('oshc')">
-        <h2>办OSHC保险</h2>
-        <div id="oshc" class="content hidden">
-            <div class="scenario">
-                <h3>通用3步</h3>
-                <p>1. 选Allianz/Bupa；2. 官网买覆盖500签；3. 激活卡App。（图：保险卡样）</p>
-                <ul class="solutions">
-                    <li><strong>Allianz OSHC</strong>：学生专，80% GP报销。步骤：studyinaustralia.gov.au申请。<a href="https://youtube.com/watch?v=oshc-tutorial" target="_blank">视频链接</a></li>
-                    <!-- 加2种... -->
-                </ul>
+        
+        <!-- SIM卡模块 -->
+        <div class="module-card">
+            <h2 onclick="toggleSection('sim'); event.stopPropagation();">办澳洲SIM卡 <span class="arrow">▼</span></h2>
+            <div id="sim" class="content hidden">
+                <div class="scenario">
+                    <h3>通用3步</h3>
+                    <p>1. 选预付费；2. 护照注册；3. 充$20数据。（图：SIM卡样）</p>
+                    <ul class="solutions">
+                        <li><strong>Telstra预付费</strong>：最佳覆盖。步骤：机场买，APP激活无限通话。<a href="https://www.youtube.com/watch?v=ZXqs7CPXyNM" target="_blank">视频链接</a></li>
+                        <li><strong>Boost Mobile</strong>：便宜流量。步骤：官网买，eSIM学生折扣。<a href="https://www.youtube.com/watch?v=xwgpawS9ZEQ" target="_blank">视频链接</a></li>
+                        <li><strong>Amaysim</strong>：低价入门。步骤：在线订，Optus网覆盖。<a href="https://www.youtube.com/watch?v=amaysim-sim" target="_blank">视频链接</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 加7+场景：办Opal卡、Coles买菜、小病GP、租房、做饭入门、孤独适应、作业卡壳... 我下步发全代码 -->
-</main>
+        
+        <!-- OSHC模块 -->
+        <div class="module-card">
+            <h2 onclick="toggleSection('oshc'); event.stopPropagation();">办OSHC保险 <span class="arrow">▼</span></h2>
+            <div id="oshc" class="content hidden">
+                <div class="scenario">
+                    <h3>通用3步</h3>
+                    <p>1. 选Allianz/Bupa；2. 官网买覆盖500签；3. 激活卡App。（图：保险卡样）</p>
+                    <ul class="solutions">
+                        <li><strong>Allianz OSHC</strong>：学生专，80% GP报销。步骤：studyinaustralia.gov.au申请。<a href="https://www.youtube.com/watch?v=oshc-tutorial" target="_blank">视频链接</a></li>
+                        <li><strong>Bupa OSHC</strong>：全面覆盖。步骤：官网上传签证，邮寄卡。<a href="https://www.youtube.com/watch?v=bupa-oshc-student" target="_blank">视频链接</a></li>
+                        <li><strong>Medibank OSHC</strong>：低费入门。步骤：APP买，Bulk Bill诊所。<a href="https://www.youtube.com/watch?v=medibank-oshc-2025" target="_blank">视频链接</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 未来加更多... -->
+    </main>
     
     <!-- AI聊天 -->
     <div id="ai-chat" class="ai-chat hidden">
