@@ -1,19 +1,21 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f4f4; color: #333; line-height: 1.6; }
-header { text-align: center; background: #007bff; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
-.search-section { text-align: center; margin: 20px 0; }
-#searchInput { width: 70%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-button { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px; }
-button:hover { background: #218838; }
-.modules { max-width: 800px; margin: 0 auto; }
-.module-card { background: white; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
-.module-card h2 { padding: 15px; margin: 0; cursor: pointer; background: #e9ecef; display: flex; justify-content: space-between; align-items: center; }
-.arrow { font-size: 20px; transition: transform 0.3s; }
-.content { padding: 0 15px 15px; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f9f4; color: #333; line-height: 1.6; } /* 澳洲绿背景 */
+header { text-align: center; background: linear-gradient(#00703C, #00A651); color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+h1 { margin: 0; font-size: 2.5em; }
+.search-section { text-align: center; margin: 30px 0; }
+#searchInput { width: 70%; padding: 12px; border: 2px solid #00703C; border-radius: 25px; font-size: 16px; }
+button { padding: 12px 24px; background: #00A651; color: white; border: none; border-radius: 25px; cursor: pointer; margin-left: 10px; font-size: 16px; transition: background 0.3s; }
+button:hover { background: #005A3A; }
+.modules { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; } /* 标题墙网格 */
+.module-card { background: white; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; cursor: pointer; transition: transform 0.3s; } /* 卡片美化 */
+.module-card:hover { transform: translateY(-5px); }
+.module-card h2 { padding: 20px; margin: 0; background: #e8f5e8; color: #00703C; display: flex; align-items: center; font-size: 1.4em; } /* 绿头 */
+.module-card h2::before { content: '🏠'; margin-right: 10px; } /* 图标例，换场景改 */
+.content { padding: 20px; }
 .content.hidden { display: none; }
-.scenario { margin-bottom: 20px; }
-.scenario h3 { color: #007bff; }
-.solutions li { margin-bottom: 10px; padding: 10px; background: #f8f9fa; border-left: 4px solid #007bff; }
-.ai-chat { position: fixed; bottom: 20px; right: 20px; width: 300px; max-height: 400px; background: white; border: 1px solid #ccc; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow-y: auto; }
-#chat-output { height: 200px; overflow-y: scroll; border: 1px solid #eee; padding: 10px; margin-bottom: 10px; background: #f8f9fa; }
-.ai-toggle { position: fixed; bottom: 20px; right: 20px; background: #007bff; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; }
-@media (max-width: 600px) { .search-section input { width: 60%; } button { display: block; margin: 10px auto; } }
+.scenario { margin-bottom: 20px; background: #f9f9f9; padding: 15px; border-radius: 10px; }
+.scenario h3 { color: #00A651; margin-top: 0; }
+.solutions li { margin: 15px 0; padding: 15px; background: #e8f5e8; border-left: 5px solid #00703C; border-radius: 5px; list-style: none; }
+.ai-chat { position: fixed; bottom: 20px; right: 20px; width: 320px; background: white; border-radius: 15px; padding: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1000; }
+#chat-output { height: 220px; overflow-y: scroll; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; background: #f9f9f9; border-radius: 10px; }
+.ai-toggle { position: fixed; bottom: 20px; right: 20px; background: #00703C; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; font-size: 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+@media (max-width: 600px) { .modules { grid-template-columns: 1fr; } #searchInput { width: 80%; } }
