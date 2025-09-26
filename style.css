@@ -1,0 +1,19 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f4f4; color: #333; line-height: 1.6; }
+header { text-align: center; background: #007bff; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+.search-section { text-align: center; margin: 20px 0; }
+#searchInput { width: 70%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+button { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px; }
+button:hover { background: #218838; }
+.modules { max-width: 800px; margin: 0 auto; }
+.module-card { background: white; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+.module-card h2 { padding: 15px; margin: 0; cursor: pointer; background: #e9ecef; display: flex; justify-content: space-between; align-items: center; }
+.arrow { font-size: 20px; transition: transform 0.3s; }
+.content { padding: 0 15px 15px; }
+.content.hidden { display: none; }
+.scenario { margin-bottom: 20px; }
+.scenario h3 { color: #007bff; }
+.solutions li { margin-bottom: 10px; padding: 10px; background: #f8f9fa; border-left: 4px solid #007bff; }
+.ai-chat { position: fixed; bottom: 20px; right: 20px; width: 300px; max-height: 400px; background: white; border: 1px solid #ccc; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow-y: auto; }
+#chat-output { height: 200px; overflow-y: scroll; border: 1px solid #eee; padding: 10px; margin-bottom: 10px; background: #f8f9fa; }
+.ai-toggle { position: fixed; bottom: 20px; right: 20px; background: #007bff; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; }
+@media (max-width: 600px) { .search-section input { width: 60%; } button { display: block; margin: 10px auto; } }
