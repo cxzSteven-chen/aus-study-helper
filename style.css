@@ -19,3 +19,6 @@ button:hover { background: #005A3A; }
 #chat-output { height: 220px; overflow-y: scroll; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; background: #f9f9f9; border-radius: 10px; }
 .ai-toggle { position: fixed; bottom: 20px; right: 20px; background: #00703C; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; font-size: 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
 @media (max-width: 600px) { .modules { grid-template-columns: 1fr; } #searchInput { width: 80%; } }
+.module-card:nth-child(1) h2::before { content: '🏦'; } /* 银行 */
+.module-card:nth-child(2) h2::before { content: '📱'; } /* SIM */
+.module-card:nth-child(3) h2::before { content: '🩹'; } /* OSHC */
