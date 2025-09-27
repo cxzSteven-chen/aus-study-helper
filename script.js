@@ -31,11 +31,11 @@ async function sendToAI() {
         const response = await fetch('https://api.x.ai/v1/chat/completions', {
             method: 'POST',
             headers: { 
-                'Authorization': 'Bearer xai-Gh6u7ahsozc7Pg0vlGqTd8iidVuKfUN8pBUIUibTu0BAmK9W7AGWvDxJ32jyw6kWir1CRYQbBeDMWgU6', 
+                'Authorization': 'Bearer xai-EJr2bfsm0HdogiLXEhnDnS8vRQreYL2rbEEe4UW5rW7ZdVyX2Z7c2UNNUGmOrW4yMkI5XumfcCwaNxeX', 
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: 'grok-beta',  // 修：换grok-beta
+                model: 'grok-4-latest',  // 修：换curl成功模型
                 messages: [
                     { role: 'system', content: '你是澳洲留学生AI导师，基于权威来源，给3步通用解法+个性化建议。限3种，共通权威。' },
                     { role: 'user', content: `澳洲留学生问题：${input}` }
@@ -44,6 +44,7 @@ async function sendToAI() {
                 temperature: 0
             })
         });
+        console.log('Response Status:', response.status); // 加：详错
         const data = await response.json();
         if (data.choices && data.choices[0]) {
             const aiReply = data.choices[0].message.content;
