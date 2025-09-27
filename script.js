@@ -35,7 +35,7 @@ async function sendToAI() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: 'grok-beta',  // 你的curl模型，高效
+                model: 'grok-beta',  // 修：换grok-beta
                 messages: [
                     { role: 'system', content: '你是澳洲留学生AI导师，基于权威来源，给3步通用解法+个性化建议。限3种，共通权威。' },
                     { role: 'user', content: `澳洲留学生问题：${input}` }
@@ -52,15 +52,9 @@ async function sendToAI() {
             output.innerHTML += `<p><strong>AI:</strong> 回应生成中... (检查key)</p>`;
         }
     } catch (error) {
+        console.log('API Error Details:', error); // 加：Console详错
         output.innerHTML += `<p><strong>AI:</strong> 连接出错：${error.message} (重试key)</p>`;
     }
     document.getElementById('chatInput').value = '';
     output.scrollTop = output.scrollHeight;
 }
-
-// 回车发送AI
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('chatInput').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') sendToAI();
-    });
-});
