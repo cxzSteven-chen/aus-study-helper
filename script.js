@@ -31,7 +31,7 @@ async function sendToAI() {
         const response = await fetch('https://api.x.ai/v1/chat/completions', {
             method: 'POST',
             headers: { 
-                'Authorization': 'Bearer YOUR_NEW_KEY',  // 占位，测试用, 
+                'Authorization': 'Bearer xai-EJr2bfsm0HdogiLXEhnDnS8vRQreYL2rbEEe4UW5rW7ZdVyX2Z7c2UNNUGmOrW4yMkI5XumfcCwaNxeX', 
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
