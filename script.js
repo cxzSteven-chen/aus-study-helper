@@ -35,7 +35,7 @@ async function sendToAI() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: 'grok-4-latest',  // 你的curl模型，高效
+                model: 'grok-beta',  // 你的curl模型，高效
                 messages: [
                     { role: 'system', content: '你是澳洲留学生AI导师，基于权威来源，给3步通用解法+个性化建议。限3种，共通权威。' },
                     { role: 'user', content: `澳洲留学生问题：${input}` }
